@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server'
 
 import getRandomQuote from '@/lib/getRandomQuote'
 
+// Choosing edge to avoid a Cold Boot Duration
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
+
 type Props = {
     params: {
         id: string,
